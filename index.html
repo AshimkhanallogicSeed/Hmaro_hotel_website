@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .bg-regal-blue {
+            background-color: #ffb30e;
+        }
+        .swiper-container {
+            position: relative;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <nav class="flex justify-between items-center p-3 bg-gray-200 text-black drop-shadow-lg">
+        <div class="flex items-center space-x-4">
+            <span class="text-xl font-bold">
+                <img src="image/logo-no-background.png" alt="Logo" class="h-12 w-auto">
+            </span>
+        </div>
+        <ul class="flex space-x-8 mx-auto">
+            <li><a href="/index.html" class="nav-link hover:text-yellow-600">Home</a></li>
+            <li><a href="#" class="nav-link hover:text-yellow-600">Services</a></li>
+            <li><a href="#" class="nav-link hover:text-yellow-600">About</a></li>
+            <li><a href="#" class="nav-link hover:text-yellow-600">Contact</a></li>
+        </ul>
+        <div class="flex items-center space-x-4">
+            <div class="relative">
+                <input type="text" placeholder="Search food" class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                    <i class="fas fa-search text-gray-500"></i>
+                </span>
+            </div>
+            <button type="button" class="bg-green-900 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+                <i class="fas fa-user"></i> <a href="/login.html">Login</a>
+            </button>
+        </div>
+    </nav>
+    <div class="main-container flex justify-start items-center h-25 bg-regal-blue p-4 space-x-4">
+        <p class="text-left">
+            <span class="font-bold text-4xl text-white">Don't let hunger win!</span>
+            <br>
+            <span class="italic text-2xl text-red-900"> Dive into delicious options near you with a <span class="text-4xl items-center text-white">click!</span></span>
+        </p>
+        <div>
+            <img class="h-80 w-auto rounded-lg border-4 border-white shadow-lg" src="image/img1.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-80 w-auto rounded-lg border-4 border-white shadow-lg" src="image/img5.jpg" alt="">
+        </div>
+    </div>
+    <div class="flex justify-around mt-8">
+        <!-- Card 1 -->
+        <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white">
+            <div class="relative">
+                <img class="w-full h-48 object-cover rounded-t-lg" src="image/img1.jpg" alt="Flat Hill Slingback">
+                <div class="absolute bottom-0 left-0 bg-yellow-500 text-white p-2 rounded-tr-lg">15% Off</div>
+            </div>
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Flat Hill Slingback</div>
+                <p class="text-gray-700 text-base">6 days Remaining</p>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white">
+            <div class="relative">
+                <img class="w-full h-48 object-cover rounded-t-lg" src="image/img2.jpg" alt="Ocean Blue Ring">
+                <div class="absolute bottom-0 left-0 bg-yellow-500 text-white p-2 rounded-tr-lg">10% Off</div>
+            </div>
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Ocean Blue Ring</div>
+                <p class="text-gray-700 text-base">6 days Remaining</p>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white">
+            <div class="relative">
+                <img class="w-full h-48 object-cover rounded-t-lg" src="image/img3.jpg" alt="Brown Leathered Wallet">
+                <div class="absolute bottom-0 left-0 bg-yellow-500 text-white p-2 rounded-tr-lg">25% Off</div>
+            </div>
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Brown Leathered Wallet</div>
+                <p class="text-gray-700 text-base">6 days Remaining</p>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white">
+            <div class="relative">
+                <img class="w-full h-48 object-cover rounded-t-lg" src="image/img4.jpg" alt="Silverside Wristwatch">
+                <div class="absolute bottom-0 left-0 bg-yellow-500 text-white p-2 rounded-tr-lg">20% Off</div>
+            </div>
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Silverside Wristwatch</div>
+                <p class="text-gray-700 text-base">6 days Remaining</p>
+            </div>
+        </div>
+    </div>
+    <div class="mt-8 p-8 bg-gray-100">
+        <h2 class="text-3xl font-bold mb-4 text-center">Popular items</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide max-w-xs mx-auto rounded overflow-hidden shadow-lg bg-white">
+                    <div class="w-full h-60 bg-gray-200">
+                        <img class="w-full h-full object-cover" src="image/img5.jpg" alt="Cheese Burger">
+                    </div>
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Cheese Burger</div>
+                        <p class="text-gray-700 text-base">Burger Arena</p>
+                        <p class="text-gray-900 text-lg">$3.88</p>
+                        <button class="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Order now</button>
+                    </div>
+                </div>
+                <div class="swiper-slide max-w-xs mx-auto rounded overflow-hidden shadow-lg bg-white">
+                    <div class="w-full h-60 bg-gray-200">
+                        <img class="w-full h-full object-cover" src="image/img4.jpg" alt="Toffe's Cake">
+                    </div>
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Toffe's Cake</div>
+                        <p class="text-gray-700 text-base">Top Sticks</p>
+                        <p class="text-gray-900 text-lg">$4.00</p>
+                        <button class="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Order now</button>
+                    </div>
+                </div>
+                <div class="swiper-slide max-w-xs mx-auto rounded overflow-hidden shadow-lg bg-white">
+                    <div class="w-full h-60 bg-gray-200">
+                        <img class="w-full h-full object-cover" src="image/img3.jpg" alt="Dancake">
+                    </div>
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Dancake</div>
+                        <p class="text-gray-700 text-base">Cake World</p>
+                        <p class="text-gray-900 text-lg">$1.99</p>
+                        <button class="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Order now</button>
+                    </div>
+                </div>
+                <div class="swiper-slide max-w-xs mx-auto rounded overflow-hidden shadow-lg bg-white">
+                    <div class="w-full h-60 bg-gray-200">
+                        <img class="w-full h-full object-cover" src="image/img2.jpg" alt="Crispy Sandwich">
+                    </div>
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Crispy Sandwich</div>
+                        <p class="text-gray-700 text-base">Fastfood Dine</p>
+                        <p class="text-gray-900 text-lg">$3.00</p>
+                        <button class="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Order now</button>
+                    </div>
+                </div>
+                <div class="swiper-slide max-w-xs mx-auto rounded overflow-hidden shadow-lg bg-white">
+                    <div class="w-full h-60 bg-gray-200">
+                        <img class="w-full h-full object-cover" src="image/img1.jpg" alt="Thai Soup">
+                    </div>
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Thai Soup</div>
+                        <p class="text-gray-700 text-base">Foody Man</p>
+                        <p class="text-gray-900 text-lg">$2.79</p>
+                        <button class="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Order now</button>
+                    </div>
+                </div>
+                <div class="swiper-slide max-w-xs mx-auto rounded overflow-hidden shadow-lg bg-white">
+                    <div class="w-full h-60 bg-gray-200">
+                        <img class="w-full h-full object-cover" src="image/img1.jpg" alt="Thai Soup">
+                    </div>
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Thai Soup</div>
+                        <p class="text-gray-700 text-base">Foody Man</p>
+                        <p class="text-gray-900 text-lg">$2.79</p>
+                        <button class="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Order now</button>
+                    </div>
+                </div>
+                <div class="swiper-slide max-w-xs mx-auto rounded overflow-hidden shadow-lg bg-white">
+                    <div class="w-full h-60 bg-gray-200">
+                        <img class="w-full h-full object-cover" src="image/img1.jpg" alt="Thai Soup">
+                    </div>
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Thai Soup</div>
+                        <p class="text-gray-700 text-base">Foody Man</p>
+                        <p class="text-gray-900 text-lg">$2.79</p>
+                        <button class="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Order now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <div class="bg-yellow-500 py-16 flex flex-col items-center">
+        <h2 class="text-4xl font-bold text-white mb-4">Are you ready to order with the best deals?</h2>
+        <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg">PROCEED TO ORDER</button>
+    </div>
+    <footer class="bg-gray-800 text-white py-12 mt-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+            <!-- Company Info -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Company</h3>
+                <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus.</p>
+                <img src="image/logo-no-background.png" alt="Logo" class="h-12 w-auto mt-4">
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul>
+                    <li><a href="#" class="text-gray-400 hover:text-yellow-600">Home</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-yellow-600">Services</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-yellow-600">About</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-yellow-600">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                <p class="text-gray-400"><i class="fas fa-map-marker-alt mr-2"></i>123 Main Street, Anytown, USA</p>
+                <p class="text-gray-400"><i class="fas fa-phone-alt mr-2"></i>(123) 456-7890</p>
+                <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i>info@example.com</p>
+            </div>
+            <!-- Social Media -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-yellow-600"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-600"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-600"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-600"><i class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8">
+            <div class="container mx-auto py-4 px-6 flex justify-between items-center">
+                <p class="text-gray-400">&copy; 2024 Your Company. All rights reserved.</p>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-gray-400 hover:text-yellow-600">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-yellow-600">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+                // when window width is >= 1024px
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40
+                }
+            }
+        });
+    </script>
+</body>
+</html>
